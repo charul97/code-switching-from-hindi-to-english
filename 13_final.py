@@ -1,5 +1,5 @@
 from tkinter import *
-#import speech_recognition as sr
+import speech_recognition as sr
 import os, csv
 import detectlanguage
 from googletrans import Translator
@@ -9,14 +9,14 @@ import goslate
 
 
 detectlanguage.configuration.api_key = "4a757fef0e4e952fd4296813c7f581ee"
-'''
+''' uncommented '''
 def speak_():
 	r = sr.Recognizer()                                                                                   
 	with sr.Microphone() as source:
 		print("Speak:")
 		audio = r.listen(source) 
 	a1=r.recognize_google(audio); 
-'''
+
 
 def gui():
 
@@ -118,7 +118,9 @@ def gui():
 
 
 
-
+	#Code for speech recognition
+	
+	speak_('Speech recog')
 
 
 
