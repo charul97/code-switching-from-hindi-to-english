@@ -1,5 +1,5 @@
 from tkinter import *
-#import speech_recognition as sr
+import speech_recognition as sr
 import os, csv
 import detectlanguage
 from googletrans import Translator
@@ -12,14 +12,14 @@ nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('corpus')
 
-'''
+''' uncommented '''
 def speak_():
 	r = sr.Recognizer()                                                                                   
 	with sr.Microphone() as source:
 		print("Speak:")
 		audio = r.listen(source) 
 	a1=r.recognize_google(audio); 
-'''
+
 
 def gui():
 
@@ -80,6 +80,12 @@ def gui():
 	text1.insert(INSERT, y+"\n")  # for displaying the result in the text box in GUI
 	print()
 
+
+	#Code for speech recognition
+	
+	speak_('Speech recog')
+
+
 	#POS tagging
 	output_file=open('Hindi_POS/hindi.input.txt', 'w')
 	output_file.write(result)
@@ -105,5 +111,7 @@ text1 = Text(master,height=10, bg="white", fg="#3498db",font=("Helvetica", 10))
 text1.grid(row = 18,column=1, pady=100)
 text1.insert(INSERT, "                                                                Result\n\n")
 master.configure(background='#ffffff') 
+
+master.configure(background='#000000') 
 
 mainloop( )
