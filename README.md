@@ -1,8 +1,8 @@
-##CODE SWITCHING FROM HINDI ENGLISH MIXED SENTENCES
+## CODE SWITCHING FROM HINDI ENGLISH MIXED SENTENCES
 
 This is a very simple tkinter ui that takes an input hindi-english romanised sentence and translates it to complete english.
 
-###Pre-requisites:
+### Pre-requisites:
 - Install detectlanguage
 ```
 pip3 install detectlanguage
@@ -16,13 +16,13 @@ pip install googletrans==3.1.0a0
 pip3 install nltk
 ```
 
-###Exceute:
+### Exceute:
 Use the following command to run the code. This will launch the Tkinter UI window:
 ```
 python3 13_final.py
 ```
 
-Limitations:
+### Limitations:
 Any sentence having 'h' rather than 'hai' will not translate it correctly.
 Example: 
 ```
